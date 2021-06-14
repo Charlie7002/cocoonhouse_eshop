@@ -28,8 +28,6 @@ const SingleProductPage = () => {
 		}
 	}, [error]);
 
-	console.log(product);
-
 	if (loading) {
 		return <Loading />;
 	}
@@ -38,7 +36,9 @@ const SingleProductPage = () => {
 		return <Error />;
 	}
 
-	const { name, price, description, stock, starts, id: sku, reviews, company, images } = product;
+	const { name, price, description, stock, starts, id: sku, reviews, company, images, stars } = product;
+
+	console.log(product);
 
 	return (
 		<Wrapper>
@@ -48,10 +48,10 @@ const SingleProductPage = () => {
 					Back to products
 				</Link>
 				<div className="product-center">
-					<ProductImages />
+					<ProductImages images={images} />
 					<section className="content">
 						<h2>{name}</h2>
-						<Stars />
+						<Stars stars={stars} reviews={reviews} />
 						<h5 className="price">{formatPrice(price)}</h5>
 						<p className="desc">{description}</p>
 						<p className="info">
@@ -67,7 +67,7 @@ const SingleProductPage = () => {
 							{company}
 						</p>
 						<hr />
-						{stock > 0 && <AddToCart />}
+						{stock > 0 && <AddToCart product={product} />}
 					</section>
 				</div>
 			</div>
