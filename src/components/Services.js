@@ -53,13 +53,12 @@ const Wrapper = styled.section`
 		gap: 2.5rem;
 	}
 	.service {
-		background: var(--darkgreen-3);
+		background: var(--clr-grey-44);
 		text-align: center;
 		padding: 2.5rem 2rem;
-		border-radius: var(--radius);
-		p {
-			color: var(--clr-white);
-		}
+		border-radius: 1.5rem;
+		border: 1px solid var(--clr-primary-9);
+		color: var(--grey-2);
 	}
 	span {
 		width: 4rem;
