@@ -80,9 +80,12 @@ const Wrapper = styled.main`
 		display: grid;
 		gap: 4rem;
 		margin-top: 2rem;
+		p {
+			color: var(--grey-4);
+		}
 	}
 	.price {
-		color: var(--clr-primary-5);
+		color: var(--grey-3);
 	}
 	.desc {
 		line-height: 2;

@@ -6,13 +6,14 @@ import { useCartContext } from "../context/cart_context";
 import AmountButtons from "./AmountButtons";
 
 const AddToCart = ({ product }) => {
+	const { addToCart } = useCartContext();
 	const { id, colors, stock } = product;
-	console.log(product);
+
 	const [mainColor, setMainColor] = useState(colors[0]);
 	const [amount, setAmount] = useState(1);
 
 	const increase = () => {
-		if (amount <= stock) {
+		if (amount < stock) {
 			setAmount(amount + 1);
 		}
 	};
@@ -39,7 +40,8 @@ const AddToCart = ({ product }) => {
 			</div>
 			<div className="btn-container">
 				<AmountButtons amount={amount} increase={increase} decrease={decrease} />
-				<Link to="/cart" className="btn">
+				{/* id, color, amount, product  */}
+				<Link to="/cart" className="btn" onClick={() => addToCart(id, mainColor, amount, product)}>
 					Add to cart
 				</Link>
 			</div>
@@ -57,6 +59,7 @@ const Wrapper = styled.section`
 		span {
 			text-transform: capitalize;
 			font-weight: 700;
+			color: var(--grey-4);
 		}
 		div {
 			display: flex;

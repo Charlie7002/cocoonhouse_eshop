@@ -101,6 +101,11 @@ const Wrapper = styled.section`
 		h5 {
 			margin-bottom: 0.5rem;
 		}
+		button,
+		p,
+		label {
+			color: var(--grey-4);
+		}
 	}
 	.search-input {
 		padding: 0.5rem;

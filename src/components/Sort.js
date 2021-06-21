@@ -48,6 +48,16 @@ const Wrapper = styled.section`
 	align-items: center;
 	margin-bottom: 2rem;
 	column-gap: 2rem;
+	form {
+		color: var(--grey-4);
+		#sort {
+			color: var(--grey-2);
+		}
+	}
+
+	.btn-container button {
+		opacity: 0.7;
+	}
 	@media (max-width: 576px) {
 		display: grid;
 		grid-template-columns: 1fr;
