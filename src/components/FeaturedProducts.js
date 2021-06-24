@@ -27,6 +27,9 @@ const FeaturedProducts = () => {
 						.slice(0, 3)}
 				</div>
 			</div>
+			<Link to="/products" className="btn">
+				All products
+			</Link>
 		</Wrapper>
 	);
 };

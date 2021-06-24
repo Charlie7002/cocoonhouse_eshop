@@ -1,7 +1,7 @@
 import React from "react";
 // import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import { BsBag } from "react-icons/bs";
-import { AiOutlineUser, AiOutlineUserDelete } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useProductsContext } from "../context/products_context";
@@ -9,21 +9,37 @@ import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
 
 const CartButtons = () => {
-	const { closeSibebar } = useProductsContext();
+	const { closeSidebar } = useProductsContext();
 	const { total_items } = useCartContext();
+	const { loginWithRedirect, myUser, logout } = useUserContext();
 	return (
 		<Wrapper className="cart-btn-wrapper">
-			<Link to="/cart" className="cart-btn" onClick={closeSibebar}>
+			<Link to="/cart" className="cart-btn" onClick={closeSidebar}>
 				<span className="cart-container">
 					<BsBag />
 					<span className="cart-value">{total_items}</span>
 				</span>
 				<small>Cart</small>
 			</Link>
-			<button type="button" className="auth-btn">
-				<AiOutlineUser />
-				<small>Login</small>
-			</button>
+			{myUser ? (
+				<button
+					type="button"
+					className="auth-btn"
+					onClick={() =>
+						logout({
+							returnTo: window.location.origin
+						})
+					}
+				>
+					<AiOutlineUser />
+					<small>Logout</small>
+				</button>
+			) : (
+				<button type="button" className="auth-btn" onClick={() => loginWithRedirect()}>
+					<AiOutlineUser />
+					<small>Login</small>
+				</button>
+			)}
 		</Wrapper>
 	);
 };
