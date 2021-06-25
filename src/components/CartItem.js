@@ -74,9 +74,9 @@ const Wrapper = styled.article`
 	}
 
 	.color {
-		color: var(--clr-grey-5);
+		color: var(--grey-font);
 		font-size: 0.75rem;
-		letter-spacing: var(--spacing);
+
 		text-transform: capitalize;
 		margin-bottom: 0;
 		display: flex;
@@ -109,7 +109,7 @@ const Wrapper = styled.article`
 		color: var(--clr-white);
 		background: transparent;
 		border: transparent;
-		letter-spacing: var(--spacing);
+
 		background: var(--clr-red-dark);
 		width: 1.5rem;
 		height: 1.5rem;
@@ -124,7 +124,8 @@ const Wrapper = styled.article`
 		.subtotal {
 			display: block;
 			margin-bottom: 0;
-			color: var(--clr-grey-5);
+
+			color: var(--grey-font);
 			font-weight: 400;
 			font-size: 1rem;
 		}

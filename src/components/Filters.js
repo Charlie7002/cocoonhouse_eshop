@@ -112,7 +112,6 @@ const Wrapper = styled.section`
 		background: var(--clr-grey-10);
 		border-radius: var(--radius);
 		border-color: transparent;
-		letter-spacing: var(--spacing);
 	}
 	.search-input::placeholder {
 		text-transform: capitalize;
@@ -126,7 +125,7 @@ const Wrapper = styled.section`
 		background: transparent;
 		border: none;
 		border-bottom: 1px solid transparent;
-		letter-spacing: var(--spacing);
+
 		color: var(--clr-grey-5);
 		cursor: pointer;
 	}

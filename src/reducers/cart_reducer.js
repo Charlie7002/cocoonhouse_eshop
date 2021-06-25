@@ -45,7 +45,7 @@ const cart_reducer = (state, action) => {
 
 	if (action.type === TOGGLE_CART_ITEM_AMOUNT) {
 		const { id, value } = action.payload;
-		console.log(state.cart);
+
 		const tempCart = state.cart.map((item) => {
 			if (item.id === id) {
 				if (value === "increase") {

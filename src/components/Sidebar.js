@@ -82,7 +82,6 @@ const SidebarContainer = styled.div`
 		padding: 1rem 1.5rem;
 		color: var(--clr-grey-3);
 		transition: var(--transition);
-		letter-spacing: var(--spacing);
 	}
 
 	.links a:hover {

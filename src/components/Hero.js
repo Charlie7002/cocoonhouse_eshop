@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import heroBcg from "../assets/hero-bcg.jpeg";
-import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+import heroBcg from "../assets/b1.jpg";
+import heroBcg2 from "../assets/c1.jpg";
 
 const Hero = () => {
 	return (
@@ -13,7 +13,7 @@ const Hero = () => {
 					<br />
 					comfort zone
 				</h1>
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas tenetur non omnis pariatur assumenda voluptatibus dignissimos, laudantium, doloribus eius unde repudiandae quod alias laborum tempora excepturi vel officiis, praesentium vero?</p>
+				<p>Furniture lover, choose from our range of furniture to dress up any room in your home: office furniture, bathroom furniture, or dining room furniture. Install garden or balcony furniture for a cozy and urban "Rooftop" atmosphere, or nature and wilderness for an adventure.</p>
 				<Link to="/products" className="btn hero-btn">
 					Shop now
 				</Link>

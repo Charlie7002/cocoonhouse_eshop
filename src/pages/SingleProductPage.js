@@ -8,8 +8,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Product from "../components/Product";
 
-console.clear();
-
 const SingleProductPage = () => {
 	const { fetchSingleProduct, single_product: product, single_product_error: error, single_product_loading: loading } = useProductsContext();
 
@@ -39,8 +37,6 @@ const SingleProductPage = () => {
 	}
 
 	const { name, price, description, stock, starts, id: sku, reviews, company, images, stars } = product;
-
-	console.log(product);
 
 	return (
 		<Wrapper>

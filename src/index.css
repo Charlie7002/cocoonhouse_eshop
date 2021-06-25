@@ -50,6 +50,7 @@ Variables
 	--clr-white: #ffffff;
 	--clr-red-dark: rgb(238, 137, 43);
 	--clr-red-light: rgb(230, 177, 107);
+	--clr-clear: rgb(250, 184, 97);
 	--clr-green-dark: hsl(160, 78%, 49%);
 	--clr-green-light: hsl(160, 71%, 66%);
 	--clr-black: #222;
@@ -190,7 +191,7 @@ p {
 	background: var(--darkgreen-1);
 	color: var(--clr-white);
 	padding: 0.4rem 0.8rem;
-	letter-spacing: var(--spacing);
+
 	display: inline-block;
 	font-weight: 300;
 	transition: var(--transition);
@@ -219,5 +220,5 @@ p {
 	padding: 5rem 0;
 }
 .page {
-	min-height: calc(100vh - (20vh + 10rem));
+	min-height: calc(100vh - (11.8vh + 10rem));
 }

@@ -51,6 +51,7 @@ const Wrapper = styled.section`
 	p {
 		display: grid;
 		grid-template-columns: 200px 1fr;
+		color: var(--grey-font);
 	}
 	p {
 		text-transform: capitalize;
